@@ -1,6 +1,6 @@
 ![Slack Logo](https://upload.wikimedia.org/wikipedia/commons/7/76/Slack_Icon.png)
 
-`slack_rs` is a Rust crate that provides an easy-to-use interface for integrating Slack with Rust applications. It supports sending messages, handling events, managing users and channels, and working with files.
+`rust_slack_sdk` is a Rust crate that provides an easy-to-use interface for integrating Slack with Rust applications. It supports sending messages, handling events, managing users and channels, and working with files.
 
 ## Features
 - **Authentication**: Supports OAuth and bot token authentication.
@@ -12,11 +12,11 @@
 - **Utilities**: Built-in rate-limiting and retry mechanisms.
 
 ## Installation
-Add `slack_rs` to your `Cargo.toml`:
+Add `rust_slack_sdk` to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-slack_rs = "0.1"
+rust_slack_sdk = "0.1"
 ```
 
 ## Usage
@@ -24,7 +24,7 @@ slack_rs = "0.1"
 ### Authentication
 
 ```rust
-use slack_rs::SlackClient;
+use rust_slack_sdk::SlackClient;
 
 let client = SlackClient::new("your-slack-bot-token");
 ```
@@ -32,7 +32,7 @@ let client = SlackClient::new("your-slack-bot-token");
 ### Sending a Message
 
 ```rust
-use slack_rs::Messaging;
+use rust_slack_sdk::Messaging;
 
 client.send_message("#general", "Hello, Slack!").unwrap();
 ```
@@ -40,7 +40,7 @@ client.send_message("#general", "Hello, Slack!").unwrap();
 ### Listening to Events
 
 ```rust
-use slack_rs::Events;
+use rust_slack_sdk::Events;
 
 client.listen_events(|event| {
     println!("Received event: {:?}", event);
@@ -50,7 +50,7 @@ client.listen_events(|event| {
 ### Fetching Users
 
 ```rust
-use slack_rs::Users;
+use rust_slack_sdk::Users;
 
 let users = client.get_users().unwrap();
 println!("Users: {:?}", users);

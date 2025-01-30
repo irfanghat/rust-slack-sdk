@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "slack_rs"
+name = "rust_slack_sdk"
 version = "0.1.0"
